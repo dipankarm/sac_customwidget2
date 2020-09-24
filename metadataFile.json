@@ -2,7 +2,7 @@
 	"name": "Hey!I am CW1",   
 	"description": "Custom Widget 1",
 	"eula": "",
-	"vendor": "Who created me?",
+	"vendor": "Dip03",
 	"license": "",
 	"id": "com.sap.sample.customwidget1",
 	"newInstancePrefix": "CusttomWidget1",
@@ -12,7 +12,7 @@
 		{
 			"kind": "main",
 			"tag": "com-sap-sample-customwidget1",
-            "url": "https://github.com/dipankarm/sac_customwidget_1/blob/master/webcomponent.js",
+            "url": "https://dipankarm.github.io/sac_customwidget_1/webcomponent.js",
             "integrity": "",
             "ignoreIntegrity" : true
 		}
