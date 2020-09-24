@@ -1,55 +1,86 @@
-(function()  {
-    let tmpl = document.createElement('template');
-    tmpl.innerHTML = `
-        <h1>Hello World</h1>
-    `; // hardcoded template. instead of style tag h1 tag used 
+(function () {
+	let version = "2.3.1";
+	let tmpl = document.createElement('template');
+	tmpl.innerHTML = `<link rel="stylesheet" type="text/css" href="https://widgets.nkappler.de/datepicker/releases/2.3.1/light.css"/>`;
 
-    //com-sap-.. name of HTML TAG thats implemented . On Running the app on Devtool - this tag will be shown 
-    //"com-sap-sample-helloworld1"
-    customElements.define('com-sap-sample-helloworld1', class HelloWorld1 extends HTMLElement {
-
-        // constructor is called once adnd standard webcompnent call back  , attach the templete to the shadow DOM  
+	class DatePicker extends HTMLElement {
 		constructor() {
-			super(); 
-			this._shadowRoot = this.attachShadow({mode: "open"});
-            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+			super();
+			this.init();
+			this.checkForUpdates();
 		}
 
-        //standard webcompnent ; Fired when the widget is added to the html DOM of the page
-        connectedCallback(){
-        }
-
-         //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
-        disconnectedCallback(){
-        
-        }
-
-         //When the custom widget is updated, the Custom Widget SDK framework executes this function first
-		onCustomWidgetBeforeUpdate(oChangedProperties) {
-
+		async checkForUpdates() {
+			try {
+				const contribution = await (await fetch("https://widgets.nkappler.de/datepicker/releases/latest/datepicker.json")).json();
+				if (contribution.version > version) {
+					console.log("A newer version of the Datepicker Custom Widget is available. Please contact your system administrator");
+				}
+			} catch (error) {}
 		}
 
-        //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
-		onCustomWidgetAfterUpdate(oChangedProperties) {
-            this.redraw();
-        }
-        
-        //When the custom widget is removed from the canvas or the analytic application is closed
-        onCustomWidgetDestroy(){
-        }
+		init() {
+			if (this.children.length === 2) return; //constructor called during drag+drop
+			if (!this.querySelector("link")) {
+				this.appendChild(tmpl.content.cloneNode(true));
+			}
+			var ctor = sap.m.DatePicker;
+			if (this._enablerange) {
+				ctor = sap.m.DateRangeSelection;
+			}
+			this.DP = new ctor({
+				change: function () {
+					this.fireChanged();
+					this.dispatchEvent(new Event("onChange"));
+				}.bind(this)
+			}).addStyleClass("datePicker");
+			this.DP.placeAt(this);
+		}
 
-        
-        //When the custom widget is resized on the canvas, the Custom Widget SDK framework executes the following JavaScript function call on the custom widget
-        // Commented out by default
-        /*
-        onCustomWidgetResize(width, height){
-        }
-        */
-        /*this method is not a custom widget framework callback. included a stub to this method in the template,  
-        There are many callbacks that could trigger re-rendering; 
-        so to centralise the redraw in a single method and call that method 
-        whenever need to update the widget in the canvas. 
-        */
-        redraw(){}
-    });
+		fireChanged() {
+			var properties = {
+				dateVal: this.DP.getDateValue()
+			};
+			if (this._enablerange) {
+				properties.secondDateVal = this.DP.getSecondDateValue();
+			}
+			this.dispatchEvent(new CustomEvent("propertiesChanged", {
+				detail: {
+					properties: properties
+				}
+			}));
+		}
+
+		set dateVal(value) {
+			if (value == undefined || !this.DP) return;
+			if (typeof (value) === "string") value = new Date(value);
+			this.DP.setDateValue(value);
+		}
+
+		set secondDateVal(value) {
+			if (value == undefined || !this.DP || !this._enablerange) return;
+			if (typeof (value) === "string") value = new Date(value);
+			this.DP.setSecondDateValue(value);
+		}
+
+		set format(value) {
+			if (!this.DP) return;
+			this.DP.setDisplayFormat(value);
+		}
+
+		set darktheme(value) {
+			this.querySelector("link").setAttribute("href", "https://widgets.nkappler.de/datepicker/releases/2.3.1/" +
+				(value ? "dark.css" : "light.css")
+			);
+		}
+
+		set enablerange(value) {
+			if (value == undefined || !this.DP) return;
+			this._enablerange = value;
+			this.DP.destroy();
+			this.init();
+		}
+	}
+
+	customElements.define('nkappler-date-picker', DatePicker);
 })();
