@@ -5,6 +5,7 @@
 	"vendor": "dipankar03",
 	"license": "",
 	"id": "com.demo.cw1",
+	"newInstancePrefix": "CustomWidget1",
 	"version": "1.0.0",
 	"icon": "https://dipankarm.github.io/sac_customwidget_1/cw/icon.png",
 	"webcomponents": [{
