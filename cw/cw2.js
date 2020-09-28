@@ -13,13 +13,13 @@ option.orange {background-color: #ef4816;}
     </style>
 
     <select name=colors>
-    <option class="green" value= "Product"</option>
-    <option class="orange" value= "In Delivery"</option>
-<option class="skyb" value= "In Legal"</option>
-<option class="blue" value= "In Sales"</option>
-<option class="purple" value= "Operations"</option>
-<option class="pink" value= "Ongoing Support"</option>
-<option class="red" value= "NOT IN USE"</option>
+    <option class="green" value= "product">Product</option>
+    <option class="orange" value= "indelivery">In Delivery</option>
+<option class="skyb" value= "inlegal">In Legal</option>
+<option class="blue" value= "insales">In Sales</option>
+<option class="purple" value= "operations">Operations</option>
+<option class="pink" value= "ongoingsupport">Ongoing Support</option>
+<option class="red" value= "noi">NOT IN USE</option>
     </select>
     `; // hardcoded template. instead of style tag h1 tag used 
 
