@@ -1,27 +1,35 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <style type="text/css">
-
-    item.red {background-color: #cc0000; }
-    item.pink {background-color: #ffcccc;}
-item.green {background-color: #28a745;}
-item.skyb {background-color: #20dada;}
-item.blue {background-color: #0366d6;}
-item.purple {background-color: #6f42c1;}
-item.orange {background-color: #ef4816;}
+       <style type="text/css">
+select.styling {
+float: left;
+  width: 100%;
+  margin-top: 6px;
+  box-sizing: border-box;
+ 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+    option.red {background-color: #cc0000; }
+    option.pink {background-color: #FFC0CB;}
+option.green {background-color: #008000;}
+option.skyb {background-color: #20dada;}
+option.blue {background-color: #0366d6;}
+option.purple {background-color: #6f42c1;}
+option.orange {background-color: #FFA500;}
 
     </style>
-
-    <select name=status >
-    <item class="green" value= "product">Product</item>
-    <item class="orange" value= "indelivery">In Delivery</item>
-<item class="skyb" value= "inlegal">In Legal</item>
-<item class="blue" value= "insales">In Sales</item>
-<item class="purple" value= "operations">Operations</item>
-<item class="pink" value= "ongoingsupport">Ongoing Support</item>
-<item class="red" value= "noi">NOT IN USE</item>
-    </select>
+     <select name="status" class="styling">
+    <option class="green" value= "product">Product</option>
+    <option class="orange" value= "indelivery">In Delivery</option>
+<option class="skyb" value= "inlegal">In Legal</option>
+<option class="blue" value= "insales">In Sales</option>
+<option class="purple" value= "operations">Operations</option>
+<option class="pink" value= "ongoingsupport">Ongoing Support</option>
+<option class="red" value= "noi">NOT IN USE</option>
     `; // hardcoded template. instead of style tag h1 tag used 
 
     //com-sap-.. name of HTML TAG thats implemented . On Running the app on Devtool - this tag will be shown 
