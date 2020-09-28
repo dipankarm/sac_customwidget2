@@ -2,7 +2,7 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style type="text/css">
-select.style { width: 100%;
+select.style { 
    float: left;
   width: 75%;
   margin-top: 6px;
