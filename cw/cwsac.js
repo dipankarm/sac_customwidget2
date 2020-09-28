@@ -6,7 +6,7 @@
 
     //com-sap-.. name of HTML TAG thats implemented . On Running the app on Devtool - this tag will be shown 
     //"com-sap-sample-helloworld1"
-    customElements.define("com.demo.cw1", cw1); 
+    customElements.define("com-demo-cw1", cw1); 
     
     class cw1 extends HTMLElement {
 
