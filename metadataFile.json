@@ -4,13 +4,12 @@
 	"eula": "",
 	"vendor": "dipankar03",
 	"license": "",
-	"id": "com.sap.sample.customwidget1",
-	"newInstancePrefix": "CusttomWidget1",
+	"id": "com.demo.cw1",
 	"version": "1.0.0",
-	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///+ZmZl4dXdBPj9hYGGOjpE6ODo8OjwvLC0lISIpJSaMiooyLzH/cjMxLi9GREb/ZSk2MzV9fX1MSks4NjcrJyn/WR9ycnJRT1AtKiv/TRVdXF1ra2v7VCfJyMk+PD6tra+rqqtUUlU0MTNqaGpjxDg2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKhJREFUGNM9z9EagiAMBeDpEGkWNAGhqFTq/Z8xwK/+q7PtZgeg6npEMcBPJ0d1Kmg6ZnFGRZcLESnR7tpoouuVSCPPZYHWee+XxTsrvQeYQrwV97tL5uZigMeoqucTUSnWEVBX4fWaW2BYz1W3bXsLDPldcD8MoYZ3glmMjNbGLJk5igDgnLTGHazdAPo1Gdms2bZXhRmbMuNR5rNWJuX075sMYg57jV94IQ2Xqt1atQAAAABJRU5ErkJggg==",
+	"icon": "https://dipankarm.github.io/sac_customwidget_1/cw/icon.png",
 	"webcomponents": [{
 		"kind": "main",
-		"tag": "com-sap-sample-customwidget1",
+		"tag": "com-demo-cw1",
 		"url": "https://dipankarm.github.io/sac_customwidget_1/cw/cwsac.js",
 		"integrity": "",
 		"ignoreIntegrity": true
