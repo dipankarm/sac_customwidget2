@@ -2,24 +2,43 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style type="text/css">
-    option.red {background-color: #cc0000;}
-    option.pink {background-color: #ffcccc;}
-option.green {background-color: #28a745;}
-option.skyb {background-color: #20dada;}
-option.blue {background-color: #0366d6;}
-option.purple {background-color: #6f42c1;}
-option.orange {background-color: #ef4816;}
+select.style { width: 100%;
+   float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+    item.red {background-color: #cc0000; float: left;
+  width: 75%;
+  margin-top: 6px;}
+    item.pink {background-color: #ffcccc;float: left;
+  width: 75%;
+  margin-top: 6px;}
+item.green {background-color: #28a745;float: left;
+  width: 75%;
+  margin-top: 6px;}
+item.skyb {background-color: #20dada;float: left;
+  width: 75%;
+  margin-top: 6px;}
+item.blue {background-color: #0366d6;float: left;
+  width: 75%;
+  margin-top: 6px;}
+item.purple {background-color: #6f42c1;float: left;
+  width: 75%;
+  margin-top: 6px;}
+item.orange {background-color: #ef4816;float: left;
+  width: 75%;
+  margin-top: 6px;}
 
     </style>
 
-    <select name=colors>
-    <option class="green" value= "product">Product</option>
-    <option class="orange" value= "indelivery">In Delivery</option>
-<option class="skyb" value= "inlegal">In Legal</option>
-<option class="blue" value= "insales">In Sales</option>
-<option class="purple" value= "operations">Operations</option>
-<option class="pink" value= "ongoingsupport">Ongoing Support</option>
-<option class="red" value= "noi">NOT IN USE</option>
+    <select name=status class="style">
+    <item class="green" value= "product">Product</item>
+    <item class="orange" value= "indelivery">In Delivery</item>
+<item class="skyb" value= "inlegal">In Legal</item>
+<item class="blue" value= "insales">In Sales</item>
+<item class="purple" value= "operations">Operations</item>
+<item class="pink" value= "ongoingsupport">Ongoing Support</item>
+<item class="red" value= "noi">NOT IN USE</item>
     </select>
     `; // hardcoded template. instead of style tag h1 tag used 
 
