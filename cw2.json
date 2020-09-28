@@ -4,13 +4,13 @@
 	"eula": "",
 	"vendor": "dipankar03",
 	"license": "",
-	"id": "com.demo.cw1",
+	"id": "com.demo.cw2",
 	"newInstancePrefix": "CustomWidget2",
 	"version": "1.0.0",
 	"icon": "https://dipankarm.github.io/sac_customwidget_2/cw/icon.png",
 	"webcomponents": [{
 		"kind": "main",
-		"tag": "com-demo-cw1",
+		"tag": "com-demo-cw2",
 		"url": "https://dipankarm.github.io/sac_customwidget_2/cw/cw2.js",
 		"integrity": "",
 		"ignoreIntegrity": true
