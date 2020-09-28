@@ -1,7 +1,16 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1>Hello World</h1>
+        <style type="text/css">
+    option.red {background-color: #cc0000; font-weight: bold; font-size: 12px;}
+    option.pink {background-color: #ffcccc;}
+    </style>
+
+    <select name=colors>
+    <option class="red" value= "../getting_started/">Getting Started </option>
+    <option class="pink" value= "../getting_started/html_intro1.htm">- Intro to HTML
+     </option>
+    </select>
     `; // hardcoded template. instead of style tag h1 tag used 
 
     //com-sap-.. name of HTML TAG thats implemented . On Running the app on Devtool - this tag will be shown 
