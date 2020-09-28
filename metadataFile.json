@@ -11,7 +11,7 @@
 	"webcomponents": [{
 		"kind": "main",
 		"tag": "com-sap-sample-customwidget1",
-		"url": "https://dipankarm.github.io/sac_customwidget_1/webcomponent.js",
+		"url": "https://dipankarm.github.io/sac_customwidget_1/cw/cwsac.js",
 		"integrity": "",
 		"ignoreIntegrity": true
 	}],
