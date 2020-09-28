@@ -1,8 +1,8 @@
 {
-	"name": "Hey!I am CW1",
+	"name": "CW1",
 	"description": "Custom Widget 1",
 	"eula": "",
-	"vendor": "Dip03",
+	"vendor": "dipankar03",
 	"license": "",
 	"id": "com.sap.sample.customwidget1",
 	"newInstancePrefix": "CusttomWidget1",
