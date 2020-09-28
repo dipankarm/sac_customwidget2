@@ -2,36 +2,22 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style type="text/css">
-select.style { 
+select.style1 { 
    float: left;
   width: 75%;
   margin-top: 6px;
 }
-    item.red {background-color: #cc0000; float: left;
-  width: 75%;
-  margin-top: 6px;}
-    item.pink {background-color: #ffcccc;float: left;
-  width: 75%;
-  margin-top: 6px;}
-item.green {background-color: #28a745;float: left;
-  width: 75%;
-  margin-top: 6px;}
-item.skyb {background-color: #20dada;float: left;
-  width: 75%;
-  margin-top: 6px;}
-item.blue {background-color: #0366d6;float: left;
-  width: 75%;
-  margin-top: 6px;}
-item.purple {background-color: #6f42c1;float: left;
-  width: 75%;
-  margin-top: 6px;}
-item.orange {background-color: #ef4816;float: left;
-  width: 75%;
-  margin-top: 6px;}
+    item.red {background-color: #cc0000; }
+    item.pink {background-color: #ffcccc;}
+item.green {background-color: #28a745;}
+item.skyb {background-color: #20dada;}
+item.blue {background-color: #0366d6;}
+item.purple {background-color: #6f42c1;}
+item.orange {background-color: #ef4816;}
 
     </style>
 
-    <select name=status class="style">
+    <select name=status class="style1">
     <item class="green" value= "product">Product</item>
     <item class="orange" value= "indelivery">In Delivery</item>
 <item class="skyb" value= "inlegal">In Legal</item>
