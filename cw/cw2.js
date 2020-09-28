@@ -17,7 +17,7 @@
     //"com-sap-sample-helloworld1"
     
     
-    class cw1 extends HTMLElement {
+    class cw2 extends HTMLElement {
 
         // constructor is called once adnd standard webcompnent call back  , attach the templete to the shadow DOM  
 		constructor() {
@@ -63,5 +63,5 @@
         */
         redraw(){}
     };
-	customElements.define("com-demo-cw1", cw1); 
+	customElements.define("com-demo-cw2", cw2); 
 })();
