@@ -2,14 +2,24 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <style type="text/css">
-    option.red {background-color: #cc0000; font-weight: bold; font-size: 12px;}
+    option.red {background-color: #cc0000;}
     option.pink {background-color: #ffcccc;}
+option.green {background-color: #28a745;}
+option.skyb {background-color: #20dada;}
+option.blue {background-color: #0366d6;}
+option.purple {background-color: #6f42c1;}
+option.orange {background-color: #ef4816;}
+
     </style>
 
     <select name=colors>
-    <option class="red" value= "../getting_started/">Getting Started </option>
-    <option class="pink" value= "../getting_started/html_intro1.htm">- Intro to HTML
-     </option>
+    <option class="green" value= "Product"</option>
+    <option class="orange" value= "In Delivery"</option>
+<option class="skyb" value= "In Legal"</option>
+<option class="blue" value= "In Sales"</option>
+<option class="purple" value= "Operations"</option>
+<option class="pink" value= "Ongoing Support"</option>
+<option class="red" value= "NOT IN USE"</option>
     </select>
     `; // hardcoded template. instead of style tag h1 tag used 
 
