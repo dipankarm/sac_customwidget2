@@ -11,7 +11,7 @@
 	"webcomponents": [{
 		"kind": "main",
 		"tag": "com-demo-cw1",
-		"url": "https://dipankarm.github.io/sac_customwidget_1/cw/cwsac.js",
+		"url": "https://dipankarm.github.io/sac_customwidget_1/cw/cw1.js",
 		"integrity": "",
 		"ignoreIntegrity": true
 	}],
